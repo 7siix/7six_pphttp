@@ -23,40 +23,33 @@ dns:
   default-nameserver:
     - 8.8.8.8
     - 8.8.4.4
-    - 8.26.56.26
-    - 8.20.247.20
   nameserver:
     - 8.8.8.8
-    - 8.8.4.4
-    - 8.26.56.26
-    - 8.20.247.20 
+    - 8.8.4.4 
     - tls://dns.rubyfish.cn:853 
     - https://8.8.8.8/dns-query 
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 proxy-groups:
-- name: 7six
+- name: Tadho 📥
   type: select
   use:
     - 7six Provider 1
-    - 7six Provider 2
     
 - name: proxy
   type: select
   proxies:
-  - 7six
+  - Tadho 📥
   - Relay
-  - Auto Provider 1
-  - Auto Provider 2
-  - LB Provider 1
-  - LB Provider 2
+  - Auto fafa
+  - stabil fafa
 
 - name: Relay
   type: relay
   proxies:
     - 7six
   
-- name: Auto Provider 1
+- name: Auto fafa
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -64,44 +57,18 @@ proxy-groups:
   use:
   - 7six Provider 1
 
-- name: Auto Provider 2
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  use:
-  - 7six Provider 2
-
-- name: LB Provider 1
+- name: stabil fafa
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
   use:
   - 7six Provider 1
-
-- name: LB Provider 2
-  type: load-balance
-  strategy: consistent-hashing
-  disable-udp: false
-  use:
-  - 7six Provider 2
 
 proxy-providers:
   7six Provider 1:
     type: http
     path: ./7six.yaml
-    url: https://raw.githubusercontent.com/7siix/config-7six-pecah/main/Konpikvms.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      interval: 300
-      lazy: true
-      url: http://www.gstatic.com/generate_204
-
-  7six Provider 2:
-    type: http
-    path: ./7sixx.yaml
-    url: https://raw.githubusercontent.com/7siix/config-7six-pecah/main/Konpiktrjn.yaml
+    url: https://raw.githubusercontent.com/7siix/fafa_7six_pphttp/main/Fafa.txt
     interval: 3600
     health-check:
       enable: true
