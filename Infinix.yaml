@@ -86,7 +86,7 @@ rule-providers:
   LAN:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
+    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.txt
     path: ./ruleset/LAN.yaml
     interval: 86400
     
