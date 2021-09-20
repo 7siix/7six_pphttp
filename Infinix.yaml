@@ -47,7 +47,7 @@ proxy-groups:
 - name: Relay
   type: relay
   proxies:
-    - 7six
+    - Tadho 📥
   
 - name: Auto fafa
   type: url-test
