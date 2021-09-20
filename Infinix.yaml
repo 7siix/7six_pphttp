@@ -68,7 +68,7 @@ proxy-providers:
   7six Provider 1:
     type: http
     path: ./7six.yaml
-    url: https://raw.githubusercontent.com/7siix/fafa_7six_pphttp/main/Fafa.txt
+    url: https://raw.githubusercontent.com/7siix/fafa_7six_pphttp/main/Fafa.yaml
     interval: 3600
     health-check:
       enable: true
@@ -80,13 +80,13 @@ rule-providers:
   Adblock :
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.txt
+    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
     path: ./ruleset/adblock.yaml
     interval: 86400
   LAN:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.txt
+    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
     path: ./ruleset/LAN.yaml
     interval: 86400
     
