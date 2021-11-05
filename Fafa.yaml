@@ -2,12 +2,12 @@ proxies:
   - name: tiktok sg
     type: vmess
     server: sgdo.seno.my.id
-    port: 443
+    port: 80
     uuid: 0eec96e7-b3eb-4874-86df-f75d8c39204c
     alterId: 32
     cipher: auto
     udp: true
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: null
     network: ws
@@ -18,12 +18,12 @@ proxies:
   - name: tiktok id
     type: vmess
     server: cloudpro.romszz.fun
-    port: 443
+    port: 80
     uuid: 050ec1c7-4a32-42ff-9bde-1eb9a912c362
     alterId: 64
     cipher: auto
     udp: true
-    tls: true
+    tls: false
     skip-cert-verify: true
     servername: null
     network: ws
