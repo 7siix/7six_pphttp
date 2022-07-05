@@ -69,7 +69,7 @@ proxy-providers:
     type: http
     path: ./7six.yaml
     url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies.yaml
-    interval: 43800
+    interval: 3600
     health-check:
       enable: true
       interval: 300
