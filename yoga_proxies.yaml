@@ -1,9 +1,9 @@
 proxies:
-  - name: tiktok sg
+  - name: Ilmupedia SG 
     type: vmess
-    server: sgdo.seno.my.id
+    server: sg1-v2ray.sshkit.org
     port: 80
-    uuid: 0eec96e7-b3eb-4874-86df-f75d8c39204c
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
     alterId: 32
     cipher: auto
     udp: true
@@ -11,9 +11,9 @@ proxies:
     skip-cert-verify: true
     servername: null
     network: ws
-    ws-path: /v2ray
+    ws-path: /sshkit/557044239/62c3b987a1c26/
     ws-headers:
-      Host: cdn.tiktok.com
+      Host: classroom.google.com
       
   - name: tiktok id
     type: vmess
