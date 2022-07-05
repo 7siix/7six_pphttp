@@ -77,12 +77,6 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 rule-providers:
-  Adblock :
-    type: http
-    behavior: domain
-    url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
-    path: ./ruleset/adblock.yaml
-    interval: 43800
   LAN:
     type: http
     behavior: ipcidr
