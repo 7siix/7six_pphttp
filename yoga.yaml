@@ -75,15 +75,6 @@ proxy-providers:
       interval: 300
       lazy: true
       url: http://www.gstatic.com/generate_204
-
-rule-providers:
-  LAN:
-    type: http
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
-    path: ./ruleset/LAN.yaml
-    interval: 43800
-    
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -115,7 +106,6 @@ rules:
   - GEOIP,CN,DIRECT
   - DST-PORT,80,DIRECT
   - SRC-PORT,7777,DIRECT
-  - RULE-SET,LAN,DIRECT,no-resolve
   - MATCH,proxy
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
