@@ -41,15 +41,15 @@ proxy-groups:
   proxies:
   - Tadho 📥
   - Relay
-  - Auto fafa
-  - stabil fafa
+  - Auto 
+  - stabil 
 
 - name: Relay
   type: relay
   proxies:
     - Tadho 📥
   
-- name: Auto fafa
+- name: Auto 
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -57,7 +57,7 @@ proxy-groups:
   use:
   - 7six Provider 1
 
-- name: stabil fafa
+- name: stabil
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
@@ -68,8 +68,8 @@ proxy-providers:
   7six Provider 1:
     type: http
     path: ./7six.yaml
-    url: https://raw.githubusercontent.com/7siix/fafa_7six_pphttp/main/Fafa.yaml
-    interval: 3600
+    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies.yaml
+    interval: 43800
     health-check:
       enable: true
       interval: 300
@@ -82,13 +82,13 @@ rule-providers:
     behavior: domain
     url: https://raw.githubusercontent.com/7siix/punya76/main/adblock.yaml
     path: ./ruleset/adblock.yaml
-    interval: 86400
+    interval: 43800
   LAN:
     type: http
     behavior: ipcidr
     url: https://raw.githubusercontent.com/7siix/punya76/main/LAN.yaml
     path: ./ruleset/LAN.yaml
-    interval: 86400
+    interval: 43800
     
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
