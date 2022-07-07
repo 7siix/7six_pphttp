@@ -1,13 +1,4 @@
 proxies:
-  - name: Ilmupedia tro
-    type: trojan
-    server: idtj-ikd.bonds.id
-    port: 443
-    password: b435c6c0-fcf8-11ec-9943-1239d0255272
-    udp: true
-    sni: livechat.tubagus.co.id
-    skip-cert-verify: true
-
   - name: ilmupedia vmess
     type: vmess
     server: 104.18.24.139
