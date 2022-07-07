@@ -31,21 +31,21 @@ proxies:
     ws-headers:
       Host: cdn.tiktok.com
 
-  - name: game1 sg
+  - name: ilped sg
     type: vmess
-    server: 104.19.143.108
+    server: 104.18.24.139
     port: 80
-    uuid: 0eec96e7-b3eb-4874-86df-f75d8c39204c
-    alterId: 32
+    uuid: 29fe2da2-62c3-4910-a2db-7ef8dd33a87c
+    alterId: 0
     cipher: auto
     udp: true
     tls: false
     skip-cert-verify: true
     servername: null
     network: ws
-    ws-path: /v2ray
+    ws-path: /vmess
     ws-headers:
-      Host: sgdo.seno.my.id
+      Host: sg.vmess2.xservs.xyz
       
   - name: game1 id
     type: vmess
