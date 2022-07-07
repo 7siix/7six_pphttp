@@ -11,6 +11,6 @@ proxies:
     skip-cert-verify: true
     servername: null
     network: ws
-    ws-path: /v2ray
+    ws-path: /vmess
     ws-headers:
       Host: sg.vmess2.xservs.xyz
