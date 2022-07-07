@@ -5,5 +5,5 @@ proxies:
     port: 443
     password: b435c6c0-fcf8-11ec-9943-1239d0255272
     udp: true
-    sni: classroom.google.com
+    sni: livechat.tubagus.co.id
     skip-cert-verify: true
