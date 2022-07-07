@@ -7,3 +7,19 @@ proxies:
     udp: true
     sni: livechat.tubagus.co.id
     skip-cert-verify: true
+
+  - name: ilmupedia vmess
+    type: vmess
+    server: bimbel.ruangguru.com
+    port: 443
+    uuid: 29fe2da2-62c3-4910-a2db-7ef8dd33a87c
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: null
+    network: ws
+    ws-path: /v2ray
+    ws-headers:
+      Host: sg.vmess2.xservs.xyz
