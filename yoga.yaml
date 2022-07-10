@@ -11,6 +11,7 @@ redir-port: 7892
 tproxy-port: 7893
 mixed-port: 7890
 allow-lan: false
+unified-delay: true
 mode: rule
 log-level: info
 ipv6: false
@@ -76,6 +77,8 @@ proxy-providers:
       lazy: true
       url: http://www.gstatic.com/generate_204
 rules:
+  - PROCESS-NAME,com.whatsapp,Auto
+  - PROCESS-NAME,com.android.chrome,Auto
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
