@@ -1,16 +1,17 @@
 proxies:
-  - name: ilmupedia vmess
-    type: vmess
-    server: 104.18.24.139
-    port: 80
-    uuid: 29fe2da2-62c3-4910-a2db-7ef8dd33a87c
-    alterId: 0
-    cipher: auto
-    udp: true
-    tls: false
-    skip-cert-verify: true
-    servername: null
-    network: ws
-    ws-path: /vmess
-    ws-headers:
-      Host: sg.vmess2.xservs.xyz
+- name: iLped 16/8/22
+  server: 104.18.24.139
+  port: 80
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: sg1-v2ray.sshkit.org
+  network: ws
+  ws-opts:
+   path: /sshkit/557044239/62c3b987a1c26/
+   headers:
+    Host: sg1-v2ray.sshkit.org
+  udp: true
