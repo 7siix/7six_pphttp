@@ -15,3 +15,20 @@ proxies:
    headers:
     Host: sg1-v2ray.sshkit.org
   udp: true
+
+- name: iLped unlimited
+  server: 104.18.24.139
+  port: 443
+  type: vmess
+  uuid: 36f20d01-79a1-4370-90a3-d3b536d5fe44
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: gt.setopratama.com
+  network: ws
+  ws-opts:
+   path: /d407d4904/
+   headers:
+    Host: gt.setopratama.com
+  udp: true
