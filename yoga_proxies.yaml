@@ -32,7 +32,7 @@ proxies:
    headers:
     Host: gt.setopratama.com
   udp: true
-- name: iLped 16/8/22
+- name: Tanpa pulsa kuota
   server: 104.16.85.20
   port: 80
   type: vmess
