@@ -1,5 +1,5 @@
 proxies:
-- name: iLped 18/8/22
+- name: GamemaX 18/8/22
   server: 104.18.22.187
   port: 80
   type: vmess
