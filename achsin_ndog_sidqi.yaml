@@ -77,7 +77,7 @@ proxy-groups:
 proxy-providers:
   7six Provider 1:
     type: http
-    path: ./0/0/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△////////7six.yaml
+    path: ./0/0/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/////////7six.yaml
     url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/achsin_ndog_sidqi_proxies.yaml
     interval: 3600
     health-check:
