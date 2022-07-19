@@ -1,20 +1,4 @@
 proxies:
-- name: iLped 16/8/22
-  server: 104.18.24.139
-  port: 80
-  type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: sg1-v2ray.sshkit.org
-  network: ws
-  ws-opts:
-   path: /sshkit/557044239/62c3b987a1c26/
-   headers:
-    Host: sg1-v2ray.sshkit.org
-  udp: true
 - name: Ruangguru 16/8/22
   server: meet.ruangguru.com
   port: 80
@@ -31,8 +15,8 @@ proxies:
    headers:
     Host: sg1-v2ray.sshkit.org
   udp: true
-- name: iLped unlimited
-  server: 104.18.24.139
+- name: Ruang guru unlimited
+  server: meet.ruangguru.com
   port: 443
   type: vmess
   uuid: 36f20d01-79a1-4370-90a3-d3b536d5fe44
