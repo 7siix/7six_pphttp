@@ -168,11 +168,6 @@ rule-providers:
     path: ./confs/ruleset/all-ads.yaml
     interval: 86400 
 rules:
-  - PROCESS-NAME,com.whatsapp,Auto
-  - PROCESS-NAME,com.android.chrome,Auto
-  - PROCESS-NAME,com.andoid.vending,Auto
-  - PROCESS-NAME,com.google.android.yutube,Auto
-  - PROCESS-NAME,com.mobile.legends,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
