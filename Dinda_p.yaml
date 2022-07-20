@@ -107,12 +107,6 @@ proxy-groups:
   disable-udp: false
   use:
   - 7six Provider 1
-- name: GAMEMAX
-  type: select
-  proxies:
-    - stabil
-  url: 'http://www.gstatic.com/generate_204'
-  interval: 100
 - name: SOSMED
   type: select
   proxies:
@@ -142,12 +136,6 @@ proxy-providers:
       lazy: true
       url: http://www.gstatic.com/generate_204
 rule-providers:
-  Gaming:
-    type: http
-    behavior: classical
-    path: "./confs/ruleset/Gamemax.yaml"
-    url: https://raw.githubusercontent.com/7siix/punya76/main/ruleGamemax.yaml
-    interval: 86400
   Sosmed:
     type: http
     behavior: domain
@@ -199,7 +187,6 @@ rules:
   - GEOIP,CN,DIRECT
   - DST-PORT,80,DIRECT
   - SRC-PORT,7777,DIRECT
-  - RULE-SET,Gaming,GAMEMAX
   - RULE-SET,Sosmed,SOSMED
   - RULE-SET,Streaming,STREAMING
   - RULE-SET,ADs,Ads
