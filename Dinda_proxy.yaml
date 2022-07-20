@@ -15,3 +15,19 @@ proxies:
    headers:
     Host: sg1-v2ray.sshkit.org
   udp: true
+- name: tanpa pulsa 20/8/22
+  server: 104.16.85.20
+  port: 80
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: sg1-v2ray.sshkit.org
+  network: ws
+  ws-opts:
+   path: /sshkit/1333581583/62d7fd3532ef5/
+   headers:
+    Host: sg1-v2ray.sshkit.org
+  udp: true
