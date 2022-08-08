@@ -1,81 +1,81 @@
 proxies:
-- name: Ruangguru 16/8/22
+- name: Ruangguru zeus
   server: meet.ruangguru.com
   port: 80
   type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: sg1-v2ray.sshkit.org
+  servername: zeus.zeaking.my.id
   network: ws
   ws-opts:
-   path: /sshkit/557044239/62c3b987a1c26/
+   path: /vmessws
    headers:
-    Host: sg1-v2ray.sshkit.org
+    Host: zeus.zeaking.my.id
   udp: true
-- name: iLped 16/8/22
+- name: iLped zeus
   server: 104.16.85.20
   port: 80
   type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: sg1-v2ray.sshkit.org
+  servername: zeus.zeaking.my.id
   network: ws
   ws-opts:
-   path: /sshkit/557044239/62c3b987a1c26/
+   path: /vmessws
    headers:
-    Host: sg1-v2ray.sshkit.org
+    Host: zeus.zeaking.my.id
   udp: true
 - name: Ruang guru unlimited
   server: meet.ruangguru.com
+  port: 80
+  type: vmess
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: zeus.zeaking.my.id
+  network: ws
+  ws-opts:
+   path: /vmessws
+   headers:
+    Host: zeus.zeaking.my.id
+  udp: true
+- name: iLped zeus 5/9/22
+  server: 104.16.85.20
+  port: 80
+  type: vmess
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: zeus.zeaking.my.id
+  network: ws
+  ws-opts:
+   path: /vmessws
+   headers:
+    Host: zeus.zeaking.my.id
+  udp: true
+- name: Tanpa pulsa kuota zeus
+  server: 104.17.3.81
   port: 443
   type: vmess
-  uuid: 36f20d01-79a1-4370-90a3-d3b536d5fe44
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: gt.setopratama.com
+  servername: api.midtrans.com
   network: ws
   ws-opts:
-   path: /d407d4904/
+   path: ws://api.midtrans.com/vmessws
    headers:
-    Host: gt.setopratama.com
-  udp: true
-- name: iLped 30/7/22
-  server: 104.16.85.20
-  port: 80
-  type: vmess
-  uuid: 4764c11e-72f8-4320-9bbb-36e9e1786e59
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: v2ray2.udpgw.com
-  network: ws
-  ws-opts:
-   path: /howdy
-   headers:
-    Host: v2ray2.udpgw.com
-  udp: true
-- name: Tanpa pulsa kuota
-  server: 104.16.85.20
-  port: 80
-  type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: sg1-v2ray.sshkit.org
-  network: ws
-  ws-opts:
-   path: /sshkit/557044239/62c3b987a1c26/
-   headers:
-    Host: sg1-v2ray.sshkit.org
+    Host: zeus.zeaking.my.id
   udp: true
