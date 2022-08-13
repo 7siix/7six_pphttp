@@ -1,33 +1,32 @@
 proxies:
-- name: GamemaX 18/8/22
-  server: 104.18.22.187
-  port: 80
-  type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  alterId: 0
+- name: mbut opok 05/9/22
+  server: 104.17.3.81
+  port: 443
+  type: vless
+  uuid: 573ed6c9-c799-43c3-8461-62a4c64a7a35
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
-  servername: sg1-v2ray.sshkit.org
+  servername: api.midtrans.com
   network: ws
-  ws-opts:
-   path: /sshkit/1334271125/62d5101610d28/
-   headers:
-    Host: sg1-v2ray.sshkit.org
+  ws-opts: 
+    path: ws://api.midtrans.com/vlessws
+    headers: 
+      Host: zeus.zeaking.my.id
   udp: true
-- name: GamemaX 26/7/22
-  server: 104.18.22.187
-  port: 80
+- name: Opok mbut zeus 5/9/22 exp
+  server: 104.17.3.81
+  port: 443
   type: vmess
-  uuid: 4f1f47f3-b663-4123-b48f-33f0a79db5d9
+  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
-  servername: v2ray2.udpgw.com
+  servername: api.midtrans.com
   network: ws
   ws-opts:
-   path: /howdy
+   path: ws://api.midtrans.com/vmessws
    headers:
-    Host: v2ray2.udpgw.com
+    Host: zeus.zeaking.my.id
   udp: true
