@@ -24,8 +24,6 @@ sniffer:
   sniffing:
     - tls
     - http
-  force-domain:
-    - '+'
   skip-domain:
     - 'google.com'
   port-whitelist:
