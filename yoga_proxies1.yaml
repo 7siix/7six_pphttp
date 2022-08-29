@@ -31,19 +31,3 @@ proxies:
    headers:
     Host: sg4-v2ray.sshkit.org
   udp: true
-- name: Tanpa pulsa kuota 29/9/22
-  server: 104.17.2.81
-  port: 443
-  type: vmess
-  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: api.midtrans.com
-  network: ws
-  ws-opts:
-   path: ws://api.midtrans.com/sshkit/557044239/630c0f5fd79c9/
-   headers:
-    Host: sg4-v2ray.sshkit.org
-  udp: true
