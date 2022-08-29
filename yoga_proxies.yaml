@@ -1,70 +1,38 @@
 proxies:
-- name: Ruangguru zeus
+- name: Ruangguru Asia 29/9/22
   server: meet.ruangguru.com
   port: 80
   type: vmess
-  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
   alterId: 0
   cipher: auto
   tls: false
-  skip-cert-verify: true
-  servername: zeus.zeaking.my.id
+  skip-cert-verify: false
+  servername: sg4-v2ray.sshkit.org
   network: ws
-  ws-opts:
-   path: /vmessws
-   headers:
-    Host: zeus.zeaking.my.id
+  ws-opts: 
+    path: /sshkit/557044239/630c0f5fd79c9/
+    headers: 
+      Host: sg4-v2ray.sshkit.org
   udp: true
-- name: iLped zeus
+- name: iLped Asia 29/9/22
   server: 104.16.85.20
   port: 80
   type: vmess
-  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: zeus.zeaking.my.id
+  servername: sg4-v2ray.sshkit.org
   network: ws
   ws-opts:
-   path: /vmessws
+   path: /sshkit/557044239/630c0f5fd79c9/
    headers:
-    Host: zeus.zeaking.my.id
+    Host: sg4-v2ray.sshkit.org
   udp: true
-- name: Ruang guru unlimited
-  server: meet.ruangguru.com
-  port: 80
-  type: vmess
-  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: zeus.zeaking.my.id
-  network: ws
-  ws-opts:
-   path: /vmessws
-   headers:
-    Host: zeus.zeaking.my.id
-  udp: true
-- name: iLped zeus 5/9/22
-  server: 104.16.85.20
-  port: 80
-  type: vmess
-  uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: zeus.zeaking.my.id
-  network: ws
-  ws-opts:
-   path: /vmessws
-   headers:
-    Host: zeus.zeaking.my.id
-  udp: true
-- name: Tanpa pulsa kuota zeus
-  server: 104.17.3.81
+- name: Tanpa pulsa kuota 29/9/22
+  server: 104.17.2.81
   port: 443
   type: vmess
   uuid: 3c460dd9-dead-4d7a-8cc5-239e3da28119
@@ -75,7 +43,7 @@ proxies:
   servername: api.midtrans.com
   network: ws
   ws-opts:
-   path: ws://api.midtrans.com/vmessws
+   path: ws://api.midtrans.com/sshkit/557044239/630c0f5fd79c9/
    headers:
-    Host: zeus.zeaking.my.id
+    Host: sg4-v2ray.sshkit.org
   udp: true
