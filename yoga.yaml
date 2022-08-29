@@ -11,6 +11,7 @@ redir-port: 7892
 tproxy-port: 7893
 mixed-port: 7890
 allow-lan: false
+unified-delay: true
 mode: rule
 log-level: info
 ipv6: false
@@ -35,7 +36,7 @@ proxy-groups:
   type: select
   use:
     - 7six Provider 1
-    
+    - 7six Provider 2
 - name: proxy
   type: select
   proxies:
@@ -56,7 +57,8 @@ proxy-groups:
   strategy: consistent-hashing
   disable-udp: false
   use:
-  - 7six Provider 1
+  - 7six Provider 2
+  
 - name: GAMEMAX
   type: select
   proxies:
@@ -66,7 +68,7 @@ proxy-groups:
 - name: SOSMED
   type: select
   proxies:
-    - stabil
+    - Auto 
   url: 'http://www.gstatic.com/generate_204'
   interval: 100
 - name: STREAMING
@@ -84,7 +86,17 @@ proxy-providers:
   7six Provider 1:
     type: http
     path: ./0/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/////////7six.yaml
-    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies.yaml
+    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies1.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+  7six Provider 2:
+    type: http
+    path: ./99/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/////////7six.yaml
+    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies2.yaml
     interval: 3600
     health-check:
       enable: true
@@ -117,7 +129,6 @@ rule-providers:
     path: ./confs/ruleset/all-ads.yaml
     interval: 86400 
 rules:
-  - PROCESS-NAME,com.whatsapp,stabil
   - PROCESS-NAME,com.android.chrome,stabil
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
