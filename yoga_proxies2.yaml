@@ -1,14 +1,30 @@
 proxies:
-  - name: Opok trojan 15gb
-    server: 104.17.2.81
-    port: 443
-    type: trojan
-    password: dc118430-276e-11ed-b880-1239d0255272
-    skip-cert-verify: true
-    sni: api.midtrans.com
-    network: ws
-    ws-opts:
-      path: ws://api.midtrans.com/howdy
-      headers:
-        Host: id5-trojan.bonds.id
-    udp: true
+- name: Opok trojan 15gb
+  server: 104.17.2.81
+  port: 443
+  type: trojan
+  password: dc118430-276e-11ed-b880-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts:
+    path: ws://api.midtrans.com/howdy
+    headers:
+      Host: id5-trojan.bonds.id
+  udp: true
+- name: Tanpa pulsa kuota 29/9/22
+  server: 104.17.2.81
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: api.midtrans.com
+  network: ws
+  ws-opts:
+   path: ws://api.midtrans.com/sshkit/557044239/630c0f5fd79c9/
+   headers:
+    Host: sg4-v2ray.sshkit.org
+  udp: true
