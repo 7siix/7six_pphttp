@@ -3,7 +3,7 @@ proxies:
   server: 104.17.2.81
   port: 443
   type: trojan
-  password: dc118430-276e-11ed-b880-1239d0255272
+  password: cfb9d5b0-2a65-11ed-a57a-1239d0255272
   skip-cert-verify: true
   sni: api.midtrans.com
   network: ws
