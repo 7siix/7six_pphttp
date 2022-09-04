@@ -1,0 +1,162 @@
+#╔╦╦╦═╦╗╔═╦═╦══╦═╗
+#║║║║═╣║║╔╣║║║║║═╣
+#║║║║═╣╚╣╚╣║║║║║═╣
+#╚══╩═╩═╩═╩═╩╩╩╩═╝
+#╔═════════════════╗
+#║   7six clash config ║
+#╚═════════════════╝
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7890
+allow-lan: false
+unified-delay: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+  nameserver:
+    - 8.8.8.8
+    - 8.8.4.4 
+    - tls://dns.rubyfish.cn:853 
+    - https://8.8.8.8/dns-query 
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+proxy-groups:
+- name: 7six 📥
+  type: select
+  use:
+    - 7six Provider 1
+- name: proxy
+  type: select
+  proxies:
+  - 7six 📥
+  - Auto 
+  - stabil 
+  
+- name: Auto 
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+  use:
+  - 7six Provider 1
+
+- name: stabil
+  type: load-balance
+  strategy: consistent-hashing
+  disable-udp: false
+  use:
+  - 7six Provider 1
+  
+- name: GAMEMAX
+  type: select
+  proxies:
+    - stabil
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 100
+- name: SOSMED
+  type: select
+  proxies:
+    - Auto 
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 100
+- name: STREAMING
+  type: select
+  proxies:
+    - stabil
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 100
+- name: "Ads"
+  type: select
+  proxies:
+    - REJECT
+    - DIRECT
+proxy-providers:
+  7six Provider 1:
+    type: http
+    path: ./0/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/////////7six.yaml
+    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/yoga_proxies1.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 300
+      lazy: true
+      url: http://www.gstatic.com/generate_204
+rule-providers:
+  Gaming:
+    type: http
+    behavior: classical
+    path: "./confs/ruleset/Gamemax.yaml"
+    url: https://raw.githubusercontent.com/7siix/punya76/main/ruleGamemax.yaml
+    interval: 86400
+  Sosmed:
+    type: http
+    behavior: domain
+    path: "./confs/ruleset/Sosmed.yaml"
+    url: https://raw.githubusercontent.com/7siix/punya76/main/Rule-Sosmed.yaml
+    interval: 86400
+  Streaming:
+    type: http
+    behavior: classical
+    path: "./confs/ruleset/Streaming.yaml"
+    url: https://raw.githubusercontent.com/7siix/punya76/main/Streaming.yaml
+    interval: 86400
+  ADs:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./confs/ruleset/all-ads.yaml
+    interval: 86400 
+rules:
+  - PROCESS-NAME,com.android.chrome,stabil
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - GEOIP,IR,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - GEOIP,CN,DIRECT
+  - DST-PORT,80,DIRECT
+  - SRC-PORT,7777,DIRECT
+  - RULE-SET,Gaming,GAMEMAX
+  - RULE-SET,Sosmed,SOSMED
+  - RULE-SET,Streaming,STREAMING
+  - RULE-SET,ADs,Ads
+  - MATCH,proxy
+#    ╔══╗═════╔╗═════
+#    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
+#    ═║║║╩╣║║╬║═╣║║║║
+#    ═╚╝╚═╩╩╬╗╠╩╬╗╠═╝
+#    ═══════╚═╝═╚═╝══
+# copas harus ijin dulu !!!
