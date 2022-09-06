@@ -72,6 +72,7 @@ proxy-providers:
 rules:
   - PROCESS-NAME,com.android.chrome,stabil
   - PROCESS-NAME,com.android.vending,stabil
+  - PROCESS-NAME,com.google.android.youtube,stabil
   - PROCESS-NAME,com.yy.hiyo,stabil
   - GEOSITE,Facebook,stabil
   - GEOSITE,instagram,stabil
