@@ -76,11 +76,6 @@ proxy-groups:
     - stabil
   url: 'http://www.gstatic.com/generate_204'
   interval: 100
-- name: "Ads"
-  type: select
-  proxies:
-    - REJECT
-    - DIRECT
 proxy-providers:
   7six Provider 1:
     type: http
@@ -111,12 +106,6 @@ rule-providers:
     path: "./confs/ruleset/Streaming.yaml"
     url: https://raw.githubusercontent.com/7siix/punya76/main/Streaming.yaml
     interval: 86400
-  ADs:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
-    path: ./confs/ruleset/all-ads.yaml
-    interval: 86400 
 rules:
   - PROCESS-NAME,com.android.chrome,stabil
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
@@ -152,7 +141,6 @@ rules:
   - RULE-SET,Gaming,GAMEMAX
   - RULE-SET,Sosmed,SOSMED
   - RULE-SET,Streaming,STREAMING
-  - RULE-SET,ADs,Ads
   - MATCH,proxy
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
