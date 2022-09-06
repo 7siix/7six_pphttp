@@ -43,6 +43,7 @@ proxies:
     path: ws://api.midtrans.com/howdy
     headers:
       Host: id5-trojan.bonds.id
+  udp: true
 - name: 7six opok biznet JKT
   server: 104.17.2.81
   port: 443
@@ -55,3 +56,4 @@ proxies:
     path: ws://api.midtrans.com/howdy
     headers:
       Host: id2-trojan.bonds.id
+  udp: true
