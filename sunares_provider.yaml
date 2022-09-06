@@ -31,3 +31,15 @@ proxies:
    headers:
     Host: id-lb.vhax.net
   udp: true
+- name: 7six opok trial
+  server: 104.17.2.81
+  port: 443
+  type: trojan
+  password: a2a87b50-2dc6-11ed-87b4-1239d0255272
+  skip-cert-verify: true
+  sni: api.midtrans.com
+  network: ws
+  ws-opts:
+    path: ws://api.midtrans.com/howdy
+    headers:
+      Host: id5-trojan.bonds.id
