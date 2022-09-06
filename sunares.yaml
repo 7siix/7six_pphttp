@@ -61,7 +61,7 @@ proxy-groups:
 - name: GAMEMAX
   type: select
   proxies:
-    - stabil
+    - DIRECT
   url: 'http://www.gstatic.com/generate_204'
   interval: 100
 - name: SOSMED
