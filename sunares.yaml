@@ -40,16 +40,7 @@ proxy-groups:
   type: select
   proxies:
   - 7six 📥
-  - Auto 
   - stabil 
-  
-- name: Auto 
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  use:
-  - 7six Provider 1
 
 - name: stabil
   type: load-balance
