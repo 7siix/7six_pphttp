@@ -18,35 +18,34 @@ ipv6: false
 external-controller: 127.0.0.1:9090
 external-ui: folder
 interface-name: ""
+proxies:
+- name: ilmupedia 6/10/22
+  server: 104.22.25.131
+  port: 80
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: sg1-v2ray.sshkit.org
+  network: ws
+  ws-opts: 
+    path: /sshkit/5721134017/631723e84da06/
+    headers: 
+      Host: sg1-v2ray.sshkit.org
+  udp: true
 proxy-groups:
 - name: 7six 📥
   type: select
-  use:
-    - 7six Provider 1
-- name: proxy
-  type: select
   proxies:
-  - 7six 📥
-  - stabil 
-
+    - ilmupedia 6/10/22
 - name: stabil
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
   use:
-  - 7six Provider 1
-  
-proxy-providers:
-  7six Provider 1:
-    type: http
-    path: ./0/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/△/////////7six.yaml
-    url: https://raw.githubusercontent.com/7siix/7six_pphttp/main/sunares_provider.yaml
-    interval: 3600
-    health-check:
-      enable: true
-      interval: 300
-      lazy: true
-      url: http://www.gstatic.com/generate_204
+  - ilmupedia 6/10/22
 rules:
   - MATCH,proxy
 #    ╔══╗═════╔╗═════
