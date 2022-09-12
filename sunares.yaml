@@ -19,32 +19,34 @@ external-controller: 127.0.0.1:9090
 external-ui: folder
 interface-name: ""
 proxies:
- - name: ilmupedia 6/10/22
-   server: 104.22.25.131
-   port: 80
-   type: vmess
-   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-   alterId: 0
-   cipher: auto
-   tls: false
-   skip-cert-verify: false
-   servername: sg1-v2ray.sshkit.org
-   network: ws
-   ws-opts: 
-     path: /sshkit/5721134017/631723e84da06/
-     headers: 
-       Host: sg1-v2ray.sshkit.org
-   udp: true
+- name: ilmupedia 6/10/22
+  server: 104.22.25.131
+  port: 80
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: sg1-v2ray.sshkit.org
+  network: ws
+  ws-opts: 
+    path: /sshkit/5721134017/631723e84da06/
+    headers: 
+      Host: sg1-v2ray.sshkit.org
+  udp: true
 proxy-groups:
 - name: 7six 📥
   type: select
   proxies:
-    - ilmupedia 6/10/22
+     - ilmupedia 6/10/22
+  url: https://www.gstatic.com/generate_204
+  intervals: 300
 - name: stabil
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
-  use:
+  proxies:
   - ilmupedia 6/10/22
 rules:
   - MATCH,7six 📥
