@@ -47,7 +47,7 @@ proxy-groups:
   use:
   - ilmupedia 6/10/22
 rules:
-  - MATCH,proxy
+  - MATCH,7six 📥
 #    ╔══╗═════╔╗═════
 #    ╚╗╔╬═╦═╦═╣╠╦╦╦╦╗
 #    ═║║║╩╣║║╬║═╣║║║║
