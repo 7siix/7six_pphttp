@@ -15,4 +15,3 @@ proxies:
     headers: 
       Host: sg1-v2ray.sshkit.org
   udp: true
-
