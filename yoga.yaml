@@ -40,7 +40,6 @@ proxy-groups:
   type: select
   proxies:
   - Tadho 📥
-  - Auto 
   - stabil 
 - name: stabil
   type: load-balance
