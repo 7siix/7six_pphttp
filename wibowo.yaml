@@ -1,0 +1,32 @@
+proxies:
+- name: RTRIALISPBARU
+  server: 104.18.24.139
+  port: 80
+  type: vmess
+  uuid: ccc8babb-cc7d-4adb-833f-3756f9ff7680
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: 
+  network: ws
+  ws-opts: 
+    path: /vmess
+    headers: 
+      Host: vip-id.casper.my.id
+  udp: true
+- name: netq_evanetoni11_2023-07-06
+  server: teach.udemy.com
+  port: 80
+  type: vless
+  uuid: df646424-76ff-45ef-ab16-4a9feb3e2914
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: teach.udemy.com
+  network: ws
+  ws-opts: 
+    path: /tunnelvless
+    headers: 
+      Host: ikdf1.gratisan.cloud
+  udp: true
