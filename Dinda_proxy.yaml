@@ -1,17 +1,17 @@
 proxies:
 - name: ASIA+VMESS-WS NTLS(2023-08-18)
-  server: 104.18.22.136
+  server: cdn.appsflyer.com
   port: 80
   type: vmess
   uuid: 2d1cc980-382b-11ee-b734-205c6d5f5d78
   alterId: 0
   cipher: auto
   tls: false
-  skip-cert-verify: true
-  servername: asia.oceis.net
+  skip-cert-verify: false
+  servername: 
   network: ws
-  ws-opts:
+  ws-opts: 
     path: /vmws
-    headers:
+    headers: 
       Host: asia.oceis.net
   udp: true
